@@ -1,0 +1,484 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChopCee Webpage</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="favicon_io/favicon.ico" />
+    <link rel="stylesheet" href="favicon_io/android-chrome-512x512.png" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-dark"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <h2>ChopCee🍛</h2>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mx-auto mb-1 mb-lg-0 nav-underline">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vendors/index.html">Restaurants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="nav-link dropdown-toggle btn btn-link"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="orders.html">Orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="order-history.html"
+                    >Order History</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-buttons ms-auto">
+          <button class="btn btn-outline-warning btn-sm" type="button">
+            <i class="fa-solid fa-shopping-cart"></i> Cart
+          </button>
+          <a
+            href="login.html"
+            class="btn btn-outline-warning btn-sm"
+            type="button"
+          >
+            <i class="fa-solid fa-user"></i> Login
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid d-flex flex-column min-vh-100">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Welcome to ChopCee!</strong> Your one-stop destination for
+        delicious food delivery. Explore our wide range of restaurants and enjoy
+        your meal at the comfort of your home.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <section class="hero">
+        <h1 class="animate__animated animate__fadeInDown mx-4 px-3">
+          Get your food delivered to your doorstep
+        </h1>
+        <p class="hero-description animate__animated animate__fadeInUp">
+          Order from your favorite restaurants and have it delivered to you in
+          no time.
+        </p>
+        <form
+          class="d-flex hero-search justify-content-center align-items-center"
+          role="search"
+        >
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search restaurants"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success ms-2" type="submit">
+            Search
+          </button>
+        </form>
+        <button class="btn btn-outline-success">
+          <i class="fa-solid fa-shopping-cart"></i> Order Now
+        </button>
+      </section>
+      <section class="vendors-section">
+        <div class="vendors-available">
+          <div class="marquee animate-marquee-fast">
+            <div class="marquee-content">
+              <span><img src="images/spar-logo.jpg" alt="spar-logo" /></span>
+              <span
+                ><img src="images/indomieCafelogo.png" alt="indomieCafe-logo"
+              /></span>
+              <span
+                ><img
+                  src="https://item7.vercel.app/assets/Item7-gupESEli.png"
+                  alt="item7-logo"
+              /></span>
+              <span
+                ><img src="images/molabat-logo.png" alt="molabat-logo"
+              /></span>
+              <span
+                ><img src="images/Unclestan-logo.jpg" alt="Unclestan-logo"
+              /></span>
+              <span
+                ><img src="images/koredespagLogo.png" alt="koredespag-logo"
+              /></span>
+              <span
+                ><a href="burgerKingMenu.html"><img src="images/burger_king.png" alt="burgerking-logo"></a></span>
+              <span
+                ><img
+                  src="images/chicken_republic.png"
+                  alt="chicken-republic-logo"
+              /></span>
+              <span><img src="images/spar-logo.jpg" alt="spar-logo" /></span>
+              <span
+                ><img src="images/indomieCafelogo.png" alt="indomieCafe-logo"
+              /></span>
+              <span
+                ><img
+                  src="https://item7.vercel.app/assets/Item7-gupESEli.png"
+                  alt="item7-logo"
+              /></span>
+              <span
+                ><img src="images/molabat-logo.png" alt="molabat-logo"
+              /></span>
+              <span
+                ><img src="images/Unclestan-logo.jpg" alt="Unclestan-logo"
+              /></span>
+              <span
+                ><img src="images/koredespagLogo.png" alt="koredespag-logo"
+              /></span>
+              <span
+                ><img src="images/burger_king.png" alt="burgerking-logo"
+              /></span>
+              <span
+                ><img
+                  src="images/chicken_republic.png"
+                  alt="chicken-republic-logo"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- POPULAR DISHES SECTION -->
+      <section class="popular-dishes py-5">
+        <div class="container-fluid">
+          <div class="section-header p-2 mb-4 bg-dark">
+            <h2 class="text-center">Popular Dishes Near You</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card shadow-sm border-0 h-100">
+                <img
+                  src="images/jollofrice.jpg"
+                  class="card-img-top"
+                  alt="Jollof Rice"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Smoky Jollof Rice</h5>
+
+                  <p class="card-text">
+                    Delicious smoky jollof rice served with grilled chicken and
+                    sweet plantain.
+                  </p>
+
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card shadow-sm border-0 h-100">
+                <img
+                  src="images/shawarma.jpg"
+                  class="card-img-top"
+                  alt="Shawarma"
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title">Chicken Shawarma</h5>
+
+                  <p class="card-text">
+                    Creamy spicy shawarma wrap loaded with juicy chicken and
+                    veggies.
+                  </p>
+
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card shadow-sm border-0 h-100">
+                <img src="images/suya.jpg" class="card-img-top" alt="Suya" />
+
+                <div class="card-body">
+                  <h5 class="card-title">Spicy Suya</h5>
+
+                  <p class="card-text">
+                    Spicy northern-style suya grilled to perfection with onions
+                    and pepper.
+                  </p>
+
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS SECTION -->
+      <section class="how-it-works py-5 bg-light">
+        <div class="container text-center">
+          <div class="section-header p-2 bg-dark mb-4">
+            <h2 class="text-center mb-4 bg-dark">How ChopCee Works 🍛</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="p-4">
+                <h1>1️⃣</h1>
+
+                <h4>Choose Restaurant</h4>
+
+                <p>Browse restaurants and discover meals you love instantly.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="p-4">
+                <h1>2️⃣</h1>
+
+                <h4>Place Your Order</h4>
+
+                <p>Add meals to your cart and checkout in seconds.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="p-4">
+                <h1>3️⃣</h1>
+
+                <h4>Fast Delivery</h4>
+
+                <p>Get your meals delivered fresh and hot to your doorstep.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOD MOOD SECTION -->
+      <section class="food-mood py-5 bg-dark text-light">
+        <div class="container text-center">
+          <h2 class="mb-4">What Are You Craving Today? 🤔</h2>
+
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-outline-warning">🍔 Fast Food</button>
+
+            <button class="btn btn-outline-warning">🍚 Local Dishes</button>
+
+            <button class="btn btn-outline-warning">🥗 Healthy Meals</button>
+
+            <button class="btn btn-outline-warning">🌯 Street Food</button>
+
+            <button class="btn btn-outline-warning">🍕 Pizza</button>
+
+            <button class="btn btn-outline-warning">🍰 Desserts</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LATE NIGHT SECTION -->
+      <section class="late-night py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img
+                src="images/Late-Night.jpg"
+                class="img-fluid rounded-4 shadow"
+                alt="Late Night Food"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <h2>Late Night Cravings? 🌙</h2>
+
+              <p class="lead">
+                Hungry at midnight? ChopCee connects you to restaurants still
+                serving hot meals all night long.
+              </p>
+
+              <button class="btn btn-warning btn-lg">
+                Explore Night Vendors
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERY TRACKER SECTION -->
+      <section class="delivery-tracker py-5 bg-dark-subtle text-light">
+        <div class="container text-center">
+          <h2>Track Your Delivery In Real Time 🚴</h2>
+
+          <p class="lead">
+            Watch your rider move from the restaurant to your doorstep.
+          </p>
+
+          <div class="tracker-box p-4 rounded-4 bg-light text-dark mt-4">
+            <h5>Current Delivery</h5>
+
+            <p>📍 Rider is 5 mins away</p>
+
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress-bar-animated"
+                style="width: 75%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT BUDGET MEALS -->
+      <section class="budget-meals py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Student Budget Meals 💸</h2>
+
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <h5>₦2,500 Combo</h5>
+
+                  <p>Rice + Chicken + Drink</p>
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <h5>₦1,800 Special</h5>
+
+                  <p>Shawarma + Pepsi</p>
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <h5>₦3,000 Feast</h5>
+
+                  <p>Jollof + Turkey + Salad</p>
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <h5>₦1,200 Quick Bite</h5>
+
+                  <p>Small Chops Pack</p>
+                  <button class="btn btn-outline-warning w-100">
+                    <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>&copy; 2026 GET FOOD. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".navbar-nav .nav-link")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

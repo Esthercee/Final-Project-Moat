@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Vendors</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <!-- your navbar here -->
+
+  <div class="container py-5">
+    <h2 class="mb-4">Our Vendors</h2>
+    <div class="row g-4" id="vendor-list"></div>
+  </div>
+
+  <script src="vendors-data.js"></script>
+  <script>
+    const container = document.getElementById('vendor-list');
+
+    vendors.forEach(vendor => {
+      container.innerHTML += `
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="${vendor.logo}" class="card-img-top" alt="${vendor.name}">
+            <div class="card-body">
+              <h5 class="card-title">${vendor.name}</h5>
+              <p class="text-muted">${vendor.category} • ⭐ ${vendor.rating}</p>
+              <a href="menu.html?vendor=${vendor.id}" class="btn btn-primary w-100">View Menu</a>
+            </div>
+          </div>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

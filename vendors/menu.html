@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <!-- your navbar here -->
+
+  <div class="container py-5">
+    <!-- These get filled by JavaScript -->
+    <div class="d-flex align-items-center gap-3 mb-4">
+      <img id="vendor-logo" src="images/indomieCafelogo.png" alt="" style="width:70px;height:70px;object-fit:cover;border-radius:50%">
+      <div>
+        <h2 id="vendor-name" class="mb-0"></h2>
+        <span id="vendor-category" class="text-muted"></span>
+      </div>
+    </div>
+
+    <div class="row g-3" id="menu-items"></div>
+  </div>
+
+  <script src="vendors-data.js"></script>
+  <script>
+    // Read ?vendor=jollof-kitchen from the URL
+    const params = new URLSearchParams(window.location.search);
+    const vendorId = params.get('vendor');
+
+    // Find that vendor in the data
+    const vendor = vendors.find(v => v.id === vendorId);
+
+    if (!vendor) {
+      document.body.innerHTML = '<div class="container py-5"><h3>Vendor not found.</h3></div>';
+    } else {
+      // Update page title
+      document.title = vendor.name + " Menu";
+
+      // Fill in header info
+      document.getElementById('vendor-logo').src = vendor.logo;
+      document.getElementById('vendor-logo').alt = vendor.name;
+      document.getElementById('vendor-name').textContent = vendor.name;
+      document.getElementById('vendor-category').textContent = vendor.category;
+
+      // Build menu cards
+      const menuContainer = document.getElementById('menu-items');
+      vendor.menu.forEach(item => {
+        menuContainer.innerHTML += `
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text text-muted">${item.description}</p>
+                <span class="fw-bold text-success">${item.price}</span>
+              </div>
+            </div>
+          </div>`;
+      });
+    }
+  </script>
+</body>
+</html>

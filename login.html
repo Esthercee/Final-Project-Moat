@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fontawesome.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/favicon-32x32.png" />
+    <link rel="stylesheet" href="favicon_io/favicon.ico" />
+    <link rel="stylesheet" href="favicon_io/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="page.css" />
+    <style>
+      .header {
+        text-align: center;
+        margin-top: 20px;
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-column min-vh-100">
+      <div class="row">
+        <div
+          class="col-md-5 justify-content-center vh-100 d-flex flex-column mx-auto"
+        >
+          <div
+            class="border p-4"
+            style="
+              border-color: white;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border: 1px solid #dee2e6;
+            "
+          >
+            <div class="text-center mb-4">
+              <button id="showLogin" class="btn btn-outline-primary me-2">
+                Login
+              </button>
+              <button id="showSignup" class="btn btn-outline-secondary">
+                Sign Up
+              </button>
+            </div>
+
+            <form id="loginForm" action="index.html">
+              <h2 class="text-center welcome py-3">Login to ChopCee</h2>
+              <p id="response"><span>*</span>All fields are required</p>
+              <div class="mb-3">
+                <label for="loginUsername" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginUsername"
+                  aria-describedby="loginUsernameHelp"
+                  placeholder="Enter Username"
+                />
+                <div id="loginUsernameHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  placeholder="Enter Password"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="loginCheck"
+                />
+                <label class="form-check-label" for="loginCheck"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-success col-12">
+                Login
+              </button>
+            </form>
+
+            <form id="signupForm" class="d-none" action="index.html">
+              <h2 class="text-center welcome py-3">Create Account</h2>
+              <p id="responseSignup"><span>*</span>All fields are required</p>
+              <div class="mb-3">
+                <label for="signupUsername" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signupUsername"
+                  placeholder="Enter Username"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signupEmail"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupPassword"
+                  placeholder="Enter Password"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signupConfirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupConfirmPassword"
+                  placeholder="Confirm Password"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="signupCheck"
+                />
+                <label class="form-check-label" for="signupCheck"
+                  >I accept terms and conditions</label
+                >
+              </div>
+              <button type="submit" class="btn btn-success col-12">
+                Sign Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Show login form, hide signup
+        $("#showLogin").click(function () {
+          $("#loginForm").removeClass("d-none");
+          $("#signupForm").addClass("d-none");
+          $("#showLogin").addClass("active");
+          $("#showSignup").removeClass("active");
+        });
+
+        // Show signup form, hide login
+        $("#showSignup").click(function () {
+          $("#signupForm").removeClass("d-none");
+          $("#loginForm").addClass("d-none");
+          $("#showSignup").addClass("active");
+          $("#showLogin").removeClass("active");
+        });
+
+        // Default: show login form on page load
+        $("#loginForm").removeClass("d-none");
+        $("#signupForm").addClass("d-none");
+        $("#showLogin").addClass("active");
+      });
+    </script>
+  </body>
+</html>
